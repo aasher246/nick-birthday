@@ -1,0 +1,274 @@
+/* Fix the banner to the top without covering other elements */
+#birthdayBanner {
+    background-color: #592137;
+    color: #cecece;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    /* So it stays at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Ensure main content is below banner */
+#mainContent {
+    margin-top: 200px;
+    /* Push down to avoid overlap */
+    text-align: center;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* Makes the background cover the entire page */
+}
+
+
+.arrangement {
+    display: flex;
+    justify-content: center;
+    /* Align the items horizontally */
+    align-items: center;
+    /* Align the items vertically */
+    gap: 20px;
+    /* Add spacing between the items */
+    margin-top: 50px;
+    /* Adjust this margin as needed to fit under the banner */
+}
+
+#flowers,
+#cake,
+#flowers2 {
+    display: flex;
+    align-items: center;
+    /* Center images vertically within their container */
+}
+
+#flowers img {
+    width: 300px;
+    height: auto;
+    margin-right: 100px;
+}
+
+#flowers2 img {
+    width: 300px;
+    height: auto;
+    margin-left: 100px;
+}
+
+
+
+#cake img {
+    width: 200px;
+    height: auto;
+}
+
+.pop-in {
+    width: 120px;
+    /* Adjust size as needed */
+    animation: popIn 0.5s ease-out forwards;
+}
+
+.bounce {
+    width: 120px;
+    /* Adjust size as needed */
+    animation: bounce 1.5s infinite;
+}
+
+/* Pop-in animation */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bounce animation for the cake */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+/* Style for the landing page */
+#landing {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the start button */
+#startButton {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    padding: 1em 2em;
+    background: #00ffcc;
+    border: 3px solid #000;
+    border-radius: 0;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #000;
+    transition: all 0.1s ease-in-out;
+    margin-top: 300px;
+    margin-bottom: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Button hover effect */
+#startButton:hover {
+    background: #af64e1;
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0 #000;
+}
+
+/* Hidden class */
+.hidden {
+    display: none !important;
+}
+
+
+
+#balloons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    animation: floatUp 8s linear infinite;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+.envelopes {
+    display: flex;
+    justify-content: center;
+    ;
+}
+
+.envelope img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.envelope img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+
+.envelope_large img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.envelope_large img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+
+/* Scroll message box */
+#messageBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    z-index: 1000;
+}
+
+.scroll {
+    background: #fff8dc;
+    border: 8px solid #d2b48c;
+    padding: 2rem;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#messageBox button {
+    margin-top: 1rem;
+    padding: 0.5em 1em;
+    background: #d2b48c;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #fff8cc, #ffd700);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkleFloat 3s ease-in-out forwards;
+    opacity: 0.8;
+    z-index: 20;
+}
+
+@keyframes sparkleFloat {
+    0% {
+        transform: scale(0.5) translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5) translateY(-100px);
+        opacity: 0;
+    }
+}

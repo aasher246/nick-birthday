@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick's Birthday</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Landing page section -->
+    <div id="landing">
+        <button id="startButton">Start</button>
+    </div>
+
+    <!-- Happy Birthday Banner, initially hidden -->
+    <div id="birthdayBanner" class="hidden">
+
+
+        <h2> Happy Birthday Nick! </h2>
+    </div>
+
+    <!-- Main content section, initially hidden -->
+    <div id="mainContent" class="hidden">
+        <div class="envelopes">
+            <div class="envelope" data-message="A virtual present for you on your special day 🖤">
+                <img src="images/envelope.svg" alt="Envelope" />
+            </div>
+            <div class="envelope" data-message="I love you more than you can ever know 🤍">
+                <img src="images/envelope.svg" alt="Envelope" />
+            </div>
+            <div class="envelope" data-message="You are amazing ✨">
+                <img src="images/envelope.svg" alt="Envelope" />
+            </div>
+        </div>
+
+
+        <div id="messageBox" class="hidden">
+            <div class="scroll">
+                <p id="messageText"></p>
+                <button onclick="closeMessage()">Close</button>
+            </div>
+        </div>
+
+        <div id="confetti"></div>
+
+        <div class="svg-container">
+            <div id="balloons"></div> <!-- Container for the balloons -->
+        </div>
+
+        <div class="arrangement">
+            <div id="flowers"></div>
+            <div id="cake"></div>
+            <div id="flowers2"></div>
+        </div>
+
+        <div class="envelopes">
+            <div class="envelope_large" data-message="Happy Birthday my love, I hope you have the best birthday and only good days ahead from now on. 
+            
+            I'm so happy you're in my life and I never thought I'd fall for anyone again, much less fall for them to this extent. 
+            
+            You're so sweet and kind, and I feel very safe with you, even if you're a little moody sometimes xD, and I love the way your mind works. 
+            
+            We'll see eachother in no time, and soon we won't have to live so far away anymore. I'm counting the days until that happens, and I can't wait to spend my days with you. I love you and Happy Birthday again. 
+                
+            All my love 
+            ~ Aash">
+                <img src="images/envelope.svg" alt="Envelope_large" />
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- Place the audio element outside the landing div -->
+    <audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+    <audio id="backgroundMusic" src="background-music.mp3" preload="auto" loop></audio>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
