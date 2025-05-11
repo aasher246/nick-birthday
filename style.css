@@ -195,7 +195,7 @@ body {
 }
 
 .envelope img {
-    width: 80px;
+    width: 100px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -209,7 +209,7 @@ body {
 
 
 .envelope_large img {
-    width: 150px;
+    width: 200px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
